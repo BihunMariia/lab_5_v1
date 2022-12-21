@@ -11,19 +11,19 @@ private:
     int min_to_sec = 60;
     int hrs_to_sec = 3600;
 public:
-    int time_convert(int hrs, int min, int sec)
+    int time_convert(int hours, int minutes, int seconds)
     {
-        int res;
-        res = min_to_sec * min + hrs_to_sec * hrs + sec;
-        return res;
+        int result;
+        result = min_to_sec * minutes + hrs_to_sec * hours + seconds;
+        return result;
     }
     int* time_convert(int my_sec, int* arr)
     {
-        int hrs = my_sec / 3600;
-        int min = (my_sec % 3600) / 60;
+        int hours = my_sec / 3600;
+        int minutes = (my_sec % 3600) / 60;
         int seconds = (my_sec % 3600) % 60;
-        arr[0] = hrs;
-        arr[1] = min;
+        arr[0] = hours;
+        arr[1] = minutes;
         arr[2] = seconds;
         return arr;
     }

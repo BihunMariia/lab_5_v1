@@ -3,19 +3,19 @@
 
 int main()
 {
-    int hrs, min, res;
-    int sec, my_sec;
+    int hours, minutes, result;
+    int seconds, my_sec;
 
     int* arr = new int[3];
-    char d, str[10];
+    char colon, time[10];
     TimeConverter my_time;
     cout << "Print your time: ";
-    cin >> str;
+    cin >> time;
 
-    istringstream s(str);
-    s >> hrs >> d >> min >> d >> sec;
-    res = my_time.time_convert(hrs, min, sec);
-    cout << "Time in seconds: " << res << "\n" << endl;
+    istringstream convert(time);
+    convert >> hours >> colon >> minutes >> colon >> seconds;
+    result = my_time.time_convert(hours, minutes, seconds);
+    cout << "Time in seconds: " << result << "\n" << endl;
     cout << "Print your time in seconds: ";
     cin >> my_sec;
     arr = my_time.time_convert(my_sec, arr);
